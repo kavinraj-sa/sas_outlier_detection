@@ -1,3 +1,5 @@
 # sas_outlier_detection
-Outlier Detection and Data Cleaning for Laboratory Data
+##  Outlier Detection and Data Cleaning for Laboratory Data
+
 Its a mini-project I choose to do for learning and practicing SAS programming, if you find it useful, I'm so glad
+I have uploaded the example clinical lab data file and the code I used to analysis it.
