@@ -98,15 +98,6 @@ RUN;
 
 
 
-/*SGPLOT*/
-
-
-PROC SGPLOT DATA=SASHELP.CLASS;
-VBOX HEIGHT / CATEGORY=SEX;
-TITLE "BOX PLOT OF HEIGHT BY GENDER";
-RUN;
-
-
 
 /* Box plot by subject */
 TITLE "Glucose Levels Box Plot by Subject";
