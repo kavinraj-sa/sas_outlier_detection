@@ -1,6 +1,6 @@
 /*dataset "/home/u64327440/DATA/Clinical_Project - Lab_data.xlsx"*/
 
-proc import datafile= "/home/u64327440/DATA/Clinical_Project - Lab_data.xlsx" out = clinical_project 
+proc import datafile= "/Clinical_Project - Lab_data.xlsx" out = clinical_project 
 dbms=XLSX  
 replace;
 getnames=yes;
@@ -101,33 +101,12 @@ RUN;
 /*SGPLOT*/
 
 
-
-
-
 PROC SGPLOT DATA=SASHELP.CLASS;
 VBOX HEIGHT / CATEGORY=SEX;
 TITLE "BOX PLOT OF HEIGHT BY GENDER";
 RUN;
 
 
-
-
-
-
-/*proc report ods */
-
-
-
-
-
-/*1. EXCEL*/
-
-ODS EXCEL FILE="/home/u64327440/SAS SQL/glucose_data.xlsx";
-PROC REPORT DATA=glucose_data;
-TITLE "glucose_data REPORT";
-FOOTNOTE "END";
-RUN;
-ODS EXCEL CLOSE;
 
 /* Box plot by subject */
 TITLE "Glucose Levels Box Plot by Subject";
@@ -166,6 +145,17 @@ PROC SGPLOT DATA=glucose_data;
     XAXIS LABEL="Subject ID";
     YAXIS LABEL="Glucose (mg/dL)";
 RUN;
+
+
+
+/*1. EXCEL*/
+
+ODS EXCEL FILE="/SAS SQL/glucose_data.xlsx";
+PROC REPORT DATA=glucose_data;
+TITLE "glucose_data REPORT";
+FOOTNOTE "END";
+RUN;
+ODS EXCEL CLOSE;
 
 
 
